@@ -277,7 +277,6 @@ function getSumToN(n) {
   }
 
   if (n >= 2) {
-    // eslint-disable-next-line no-plusplus
     for (let i = 0; i <= n; i++) {
       res += i;
     }
