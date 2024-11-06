@@ -1,9 +1,6 @@
-/* eslint-disable consistent-return */
-/* eslint-disable no-plusplus */
-/* eslint-disable no-undef */
 /* *******************************************************************************************
  *                                                                                           *
- * Please read the following tutorial before implementing tasks:                              *
+ * Please read the following tutorial before implementing tasks:                             *
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates           *
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number   *
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math     *
@@ -271,16 +268,7 @@ function getFibonacciNumber(/* index */) {
  *   1  => 1
  */
 function getSumToN(n) {
-  let res = 0;
-  if (n === 1) {
-    res = 1;
-  }
-
-  if (n >= 2) {
-    for (let i = 0; i <= n; i++) {
-      res += i;
-    }
-  }
+  const res = (n * (n + 1)) / 2;
   return res;
 }
 
@@ -297,17 +285,11 @@ function getSumToN(n) {
  */
 function getSumOfDigits(num) {
   let res = 0;
-  if (num < 100) {
-    res = num;
-  }
-
-  if (num >= 100) {
-    const str = String(num);
-    const arr = str.split('');
-    for (let i = 0; i < arr.length; i++) {
-      res += Number(arr[i]);
-    }
-  }
+  const str = String(num);
+  const arr = str.split('');
+  arr.forEach((elem) => {
+    res += Number(elem);
+  });
   return res;
 }
 
